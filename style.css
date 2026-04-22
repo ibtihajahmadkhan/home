@@ -1,56 +1,41 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  color: #222;
+  font-family: Arial, sans-serif;
   background: #fafafa;
+  color: #222;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .container {
-  width: min(1100px, 92%);
+  width: 90%;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .site-header {
-  background: #0f172a;
+  background: #800180;
   color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 14px 0;
 }
 
 .nav-wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
-  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .brand {
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  margin-right: 14px;
+  font-size: 14px;
 }
 
 nav a:hover {
@@ -58,103 +43,133 @@ nav a:hover {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 40px;
+  display: flex;
+  gap: 30px;
   align-items: center;
-  padding: 60px 0 30px;
+  justify-content: space-between;
+  padding: 30px 0;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+color: #000000;
+}
+
+.hero-image {
+  flex: 0 0 220px;
+  text-align: right;
 }
 
 .hero-image img {
-  width: 100%;
-  border-radius: 16px;
-  display: block;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
-
-.hero-text h1 {
-  margin-top: 0;
-  font-size: 2.2rem;
-}
-
-.social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 20px;
+  width: 220px;
+  border-radius: 12px;
 }
 
 .social-links a {
   display: inline-block;
-  padding: 10px 14px;
-  background: #e2e8f0;
-  border-radius: 999px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  background: #f3e8f8;
+  color: #800180;
   text-decoration: none;
-  color: #111827;
-  font-weight: 600;
+  border-radius: 20px;
+  font-size: 14px;
 }
 
 .section {
-  padding: 40px 0;
-  border-top: 1px solid #e5e7eb;
+  padding: 16px 0;
 }
 
-.section h2 {
-  margin-top: 0;
-  margin-bottom: 18px;
-  font-size: 1.8rem;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  padding: 22px;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-}
-
-.materials-list {
-  display: grid;
-  gap: 12px;
-}
-
-.material-item {
-  background: white;
-  padding: 14px 18px;
+.purple-section {
+  background: #fbf8fe;
+  border: 1px solid #8e2bc3;
   border-radius: 12px;
-  text-decoration: none;
-  color: #0f172a;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 16px;
 }
 
-.material-item:hover {
-  background: #f1f5f9;
+.purple-section h2 {
+  color: #800180;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.purple-section h3 {
+  color: #800180;
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.purple-section p,
+.purple-section li,
+.purple-section a {
+  font-size: 14px;
+}
+
+.purple-section ul,
+.purple-section ol {
+  padding-left: 22px;
+  margin-top: 0;
+}
+
+.purple-section li {
+  margin-bottom: 8px;
+}
+
+.purple-section a {
+  color: #800180;
+  text-decoration: none;
+}
+
+.purple-section a:hover {
+  text-decoration: underline;
 }
 
 .site-footer {
-  padding: 30px 0;
-  text-align: center;
-  background: #0f172a;
+  background: #800180;
   color: white;
-  margin-top: 40px;
+  text-align: center;
+  padding: 14px 0;
+  margin-top: 20px;
+  font-size: 14px;
 }
 
-@media (max-width: 800px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
+p {
+  text-align: justify;
+}
 
-  .hero-image {
-    max-width: 280px;
-  }
+.purple-section ul ul {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
 
-  .nav-wrap {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.purple-section ul ul li {
+  list-style-type: disc;
+}
+
+.job-entry {
+  margin-bottom: 20px;
+}
+
+.job-entry p {
+  margin-bottom: 8px;
+}
+
+.job-entry ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 22px;
+}
+
+.job-entry ul ul {
+  margin-top: 6px;
+  padding-left: 22px;
+}
+
+.job-entry li {
+  margin-bottom: 8px;
 }
